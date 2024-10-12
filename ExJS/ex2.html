@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 02</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>⚔️ Contador de Caracteres ⚔️</h1>
+            <p id="description">Descubra a contagem de seus caracteres!</p>
+            <textarea id="text" placeholder="Digite sua mensagem épica aqui..." onkeyup="contador()"></textarea>
+            <div class="counter-display">
+                <span id="contador">0</span> caracteres digitados
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function contador() {
+            var length = document.getElementById("text").value.length;
+            document.getElementById("contador").textContent = length;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+/* Remove margens e padding padrão de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo com fundo escuro */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a2a2a; /* Fundo escuro para maior contraste */
+    font-family: 'Garamond', serif; /* Fonte que lembra um estilo medieval */
+    color: #fff; /* Texto branco */
+}
+
+/* Container centralizado */
+.container {
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    background: linear-gradient(135deg, #3a0b0b, #5f1f1f); /* Gradiente vermelho escuro */
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8); /* Sombra escura */
+    border: 5px solid #ff4500; /* Borda laranja brilhante */
+}
+
+/* Estilo do título */
+h2 {
+    font-size: 2rem;
+    color: #ff4500; /* Laranja brilhante */
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 0 0 2px #ff4500, 0 0 4px #fff; /* Efeito de brilho */
+}
+
+/* Descrição com um toque de fantasia */
+p, ul {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #ffcc00; /* Amarelo dourado */
+}
+
+/* Grupo de inputs estilizado */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os inputs */
+}
+
+/* Estilo dos labels */
+label {
+    margin: 10px 0 5px; /* Margem para separar dos inputs */
+}
+
+/* Estiliza os inputs */
+input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 2px solid #ff4500; /* Borda laranja brilhante */
+    background-color: #3b0c0c; /* Fundo vermelho escuro */
+    color: #ffffff; /* Texto branco */
+    font-size: 1.1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Efeito ao focar nos inputs */
+input:focus {
+    border-color: #ffcc00; /* Borda dourada ao focar */
+}
+
+/* Estilo do botão */
+button {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #ff4500; /* Fundo laranja */
+    color: #fff; /* Texto branco */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+button:hover {
+    background-color: #ffcc00; /* Fundo dourado ao passar o mouse */
+    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+}

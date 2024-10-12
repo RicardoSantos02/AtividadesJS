@@ -1,0 +1,89 @@
+/* Remove margens e padding padrão de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo com fundo escuro */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a2a2a; /* Fundo escuro para maior contraste */
+    font-family: 'Garamond', serif; /* Fonte que lembra um estilo medieval */
+    color: #fff; /* Texto branco */
+}
+
+/* Container centralizado */
+.container {
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+}
+
+/* Estilo do cartão com bordas e fundo texturizado */
+.card {
+    background: linear-gradient(135deg, #3a0b0b, #5f1f1f); /* Gradiente vermelho escuro */
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8); /* Sombra escura */
+    border: 5px solid #ff4500; /* Borda laranja brilhante */
+}
+
+/* Estilo chamativo do título */
+h1 {
+    font-size: 2.5rem;
+    color: #ff4500; /* Laranja brilhante */
+    margin-bottom: 10px;
+    text-shadow: 0 0 2px #ff4500, 0 0 4px #fff; /* Efeito de brilho */
+}
+
+/* Descrição com um toque de fantasia */
+#description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ffcc00; /* Amarelo dourado */
+}
+
+/* Estiliza o textarea com um fundo escuro e bordas detalhadas */
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #ff4500; /* Borda laranja brilhante */
+    background-color: #3b0c0c; /* Fundo vermelho escuro */
+    color: #ffffff; /* Texto branco */
+    font-size: 1.1rem;
+    outline: none;
+    resize: none;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Efeito ao focar no textarea */
+textarea:focus {
+    box-shadow: 0 0 20px #ff4500; /* Efeito de brilho laranja ao focar */
+    border: 2px solid #ffcc00; /* Borda dourada ao focar */
+}
+
+/* Contador de caracteres com fundo vibrante e bordas detalhadas */
+.counter-display {
+    font-size: 2rem;
+    color: #ffcc00; /* Amarelo dourado */
+    background-color: #5f1f1f; /* Vermelho mais claro */
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    border: 2px solid #ff4500; /* Borda laranja brilhante */
+    box-shadow: 0 0 10px #ff4500; /* Efeito de luz laranja */
+    transition: transform 0.5s ease;
+}
+
+/* Efeito ao passar o mouse sobre o contador */
+.counter-display:hover {
+    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+    box-shadow: 0 0 20px #ff4500; /* Brilho mais intenso */
+}
