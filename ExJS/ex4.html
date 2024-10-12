@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <link rel="stylesheet" href="css/style3.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>🧮 Calculadora</h1>
+            <input id="tela" disabled>
+            <div class="buttons">
+                <button onclick="add(7)">7</button>
+                <button onclick="add(8)">8</button>
+                <button onclick="add(9)">9</button>
+                <button onclick="setOperation('-')">-</button>
+
+                <button onclick="add(4)">4</button>
+                <button onclick="add(5)">5</button>
+                <button onclick="add(6)">6</button>
+                <button onclick="setOperation('+')">+</button>
+
+                <button onclick="add(1)">1</button>
+                <button onclick="add(2)">2</button>
+                <button onclick="add(3)">3</button>
+                <button onclick="setOperation('*')">*</button>
+
+                <button onclick="add(0)">0</button>
+                <button onclick="calculate()">=</button>
+                <button onclick="clearScreen()">CE</button>
+                <button onclick="setOperation('/')">/</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let operation = '';
+        let firstValue = '';
+
+        function add(num) {
+            document.getElementById("tela").value += num;
+        }
+
+        function setOperation(op) {
+            firstValue = document.getElementById("tela").value;
+            operation = op;
+            document.getElementById("tela").value = '';
+        }
+
+        function calculate() {
+            const secondValue = document.getElementById("tela").value;
+            let result = 0;
+
+            if (firstValue && secondValue) {
+                switch (operation) {
+                    case '+':
+                        result = parseFloat(firstValue) + parseFloat(secondValue);
+                        break;
+                    case '-':
+                        result = parseFloat(firstValue) - parseFloat(secondValue);
+                        break;
+                    case '*':
+                        result = parseFloat(firstValue) * parseFloat(secondValue);
+                        break;
+                    case '/':
+                        result = parseFloat(firstValue) / parseFloat(secondValue);
+                        break;
+                }
+                document.getElementById("tela").value = result;
+                firstValue = '';
+                operation = '';
+            }
+        }
+
+        function clearScreen() {
+            document.getElementById("tela").value = '';
+            firstValue = '';
+            operation = '';
+        }
+    </script>
+</body>
+</html>
